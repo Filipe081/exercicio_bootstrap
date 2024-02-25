@@ -1,42 +1,36 @@
 <!DOCTYPE html>
-<html lang="Pt-Br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+    <title>To List</title>
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <title>Agenda de contatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-    <header>
-        <h1>Lista de contatos</h1>
-    </header>
-    <form id="form-cadastro">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required>
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" required>
-        <input  id="button" type="submit" value="Cadastrar">
-    </form>
-    <div class="table-container">
-        <table id="tabela-contatos" border="1">
-            <caption>Contatos</caption>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                </tr>
-            </tbody>
+    <div class="logo">
+        <header>
+            <h1>Cadastrar atividade</h1> 
+        </header>
+    </div>    
+    <div class="conteiner">
+        <div class="headerForm">
+            <h1>Adicionar atividade</h1>   
+        </div>
+        <form>
+            <label for="tarefa">Nova tarefa:</label>
+            <input id="tarefa" class="itemTxt" type="text" placeholder="Ex: Tarefa de Ingles" required>
+            <button type="submit">Adicionar Tarefas✏️</button>
+        </form>
+        <div class="adicionar-tarefa">
+            <h3>Tarefas de Hoje</h3>
+        </div>
+        <ul></ul>
         </table>
     </div>
-    </div>
-    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

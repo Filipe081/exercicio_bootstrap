@@ -1,70 +1,112 @@
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: 'Protest Strike', sans-serif;
+    font-weight: normal;
 }
 
-header{
-    margin-bottom: 60px;
-}
-
-form{
+body {
+    background-color: rgb(255, 0, 0);
+    color: #000000;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-label{
-    color: rgb(255, 5, 5);
-    font-size: medium;
-
-}
-
-input{
+.logo, .headerForm, .adicionar-tarefa, .footerMain, .tabela-pequena {
     display: flex;
     justify-content: center;
-    margin-bottom: 35px;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 16px;
+    margin: 8px 0;
 }
 
-#button{
-    background-color: rgb(255, 255, 255);
-    font-family: 'Noto Sans', sans-serif;
+.logo header,
+.headerForm h1,
+.adicionar-tarefa h3,
+.footerMain footer {
+    font-size: 25px;
 }
 
-#button:hover{
-    background-color: rgb(255, 0, 0);
+.conteiner {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 10px;
+    width: 480px;
+    max-width: 100%;
 }
 
-body{
+form {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+form label {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+form .itemTxt {
+    display: block;
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+form button {
+    display: block;
+    font-size: 14px;
+    padding: 8px;
     background-color: #000000;
-    color: #ff0000;
-    font-family: 'Noto Sans', sans-serif;
-    border: color(rgb(255, 0, 0));
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin-top: 60px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.container{
-    width: 300px;
-    padding: 20px;
+ul li {
+    background: #000000;
+    color: #f30808;
+    height: 40px;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 18px;
     text-align: center;
 }
 
-caption{
-    margin-bottom: 10px;
+.linha-meio {
+    text-decoration: line-through;
+    color: #4CAF50;
+    font-size: 18px;
 }
 
-.table-container{
-    display: flex;
-    justify-content: center; 
+ul li .pendente {
+    margin-right: 5px;
 }
 
-table{
-    width: 100%;
-    border-radius: 7px;
-    border-color: rgb(255, 0, 0);
+ul li.checked .pendente {
+    display: none;
+}
+
+ul li.checked::before {
+    content: '✅ ';
+    margin-right: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.footerMain {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: underline;
+    color: #fff;
 }

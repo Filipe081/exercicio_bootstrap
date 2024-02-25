@@ -1,20 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {     // Espera que o DOM seja totalmente carregado
+$(document).ready(function () {
 
-    const form = document.getElementById("form-cadastro");
-    const tabelaDeContatos = document.getElementById("tabela-contatos");
+    $("form").submit(function (event) {
+        event.preventDefault();
 
-    form.addEventListener("submit", function(e) {   // Impede o envio padrão do formulário
-        e.preventDefault();
+        const valorinput = $("#tarefa").val();
+        $("ul").append(`<li><span class="pendente">📍</span> ${valorinput}</li>`);
+        $("#tarefa").val('');
 
-    var nome = document.getElementById("nome").value;
-    var telefone = document.getElementById("telefone").value;   // Obtém os valores dos campos de entrada
+        $("ul").on('click', 'li', function(){
+            $(this).toggleClass("linha-meio");
+            $(this).toggleClass("checked");
+            $(this).find(".pendente").toggleClass("hide");
+            
+        })
+        
+    });
 
-    var newrow = tabelaDeContatos.insertRow();   // Cria uma nova linha na tabela
-    var cell1 = newrow.insertCell(0);
-    var cell2 = newrow.insertCell(1);
-    cell1.innerHTML = nome;
-    cell2.innerHTML = telefone;
-
-    form.reset()  // Limpa os campos do formulário
-    })
-}) 
+});
